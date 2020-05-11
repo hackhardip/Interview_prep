@@ -1,0 +1,30 @@
+'''
+class Solution:
+    def countPrimes(self, n: int) -> int:
+        all_number = [True]*n
+        if n < 2:
+            return 0
+        all_number[0] = all_number[1] = False
+        for i in range(2,int(math.sqrt(n)+1)):
+            if all_number[i]:
+                for j in range(i*i,n,i):
+                    all_number[j] = False
+        return sum(all_number)
+            
+                
+                    
+'''
+class Solution:
+    def countPrimes(self, n: int) -> int:
+        all_number = [True]*n
+        if n < 2:
+            return 0
+        all_number[0] = all_number[1] = False
+        for i in range(2,int(math.sqrt(n)+1)):
+            if all_number[i]:
+                for j in range(i*i,n,i):
+                    all_number[j] = False
+        return sum(all_number)
+            
+                
+                    
